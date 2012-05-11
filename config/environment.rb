@@ -1,6 +1,7 @@
 # lib contains all classes
 $: << File.expand_path('../../lib',  __FILE__)
 require 'java'
+require 'matrix'
 
 puts File.expand_path('../../lib',  __FILE__)
 
@@ -23,6 +24,8 @@ java_import 'org.apache.mahout.cf.taste.impl.model.file.FileDataModel'
 java_import 'org.apache.mahout.cf.taste.impl.recommender.svd.ALSWRFactorizer'
 java_import 'org.apache.mahout.common.iterator.sequencefile.SequenceFileIterator'
 java_import 'org.apache.mahout.math.SingularValueDecomposition'
+java_import 'org.apache.mahout.math.DenseMatrix'
+java_import 'org.apache.mahout.math.DenseVector'
 
 # used by scatter_plot
 #require 'scatter_plot'
