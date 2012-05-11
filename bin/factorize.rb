@@ -7,6 +7,6 @@ netflix_ratings = AlsFactorizer.new( ARGV[0] || 'ratings.csv' )
 netflix_ratings.factorize(5, 0.04, 1)
 
 # singular value decomposition
-svd = Svd.new netflix_ratings.rating_matrix
+svd = SingularValueDecomposition.new netflix_ratings.rating_matrix
 
 puts "Matrix rank: #{svd.rank}"
